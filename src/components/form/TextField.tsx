@@ -4,7 +4,7 @@ import { InputHTMLAttributes, ReactNode } from 'react';
 export interface TextFieldRootProps { children: ReactNode }
 function TextFieldRoot({ children }: TextFieldRootProps) {
   return (
-    <label className="flex items-center gap-3 h-12 py-4 px-3 rounded bg-gray-800 w-full focus-within:ring-2 ring-cyan-300">
+    <label className="flex items-center gap-3 h-12 py-4 px-3 rounded bg-gray-800 w-full focus-within:ring-2 ring-cyan-300 cursor-text">
       {children}
     </label>
   )

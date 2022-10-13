@@ -6,9 +6,10 @@ export interface TextProps {
   asChild?: boolean;
   size?: 'sm' | 'md' | 'lg';
   children: ReactNode;
+  className?: string;
 }
 
-export function Text({ asChild = false, size = 'md', children }: TextProps) {
+export function Text({ asChild = false, size = 'md', children, className }: TextProps) {
   const Component = asChild ? Slot : 'span';
   
   return (
@@ -16,7 +17,7 @@ export function Text({ asChild = false, size = 'md', children }: TextProps) {
       'text-xs': size === 'sm',
       'text-sm': size === 'md',
       'text-md': size === 'lg',
-    })}>
+    }, className)}>
       {children}
     </Component>
   )
